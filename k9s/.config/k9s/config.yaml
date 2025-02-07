@@ -1,0 +1,9 @@
+# $XDG_CONFIG_HOME/k9s/config.yaml
+# Global skin is specified
+k9s:
+  liveViewAutoRefresh: true
+  refreshRate: 2
+  maxConnRetry: 5
+  ui:
+    enableMouse: true
+    skin: dracula

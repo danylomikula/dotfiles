@@ -1,0 +1,16 @@
+[general]
+import = ["~/.config/alacritty/themes/themes/gruvbox_dark.toml"]
+
+[terminal.shell]
+program = "/bin/zsh"
+
+[font]
+size = 20
+
+[font.normal]
+family = "UbuntuMono Nerd Font"
+
+[window]
+padding = { x = 7, y = 0 }
+dimensions = { columns = 160, lines = 50 }
+option_as_alt = "Both"
