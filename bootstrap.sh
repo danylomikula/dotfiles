@@ -71,7 +71,7 @@ brew install jq fx yh htop iperf3 make wget speedtest-cli tree eza zoxide stow d
 gum style --foreground "#00FF00" --bold "Synchronizing dotfiles..."
 # WARNING: This removes your current ~/.zshrc. Ensure your dotfiles repository is complete.
 rm ~/.zshrc
-stow zshrc starship alacritty zellij k9s docker
+stow zshrc starship alacritty zellij k9s docker git github-cli
 
 # ------------------------- Alacritty Themes -----------------------------------
 
@@ -213,9 +213,9 @@ EOF
   gum style --foreground "#00FF00" --bold "Do you want to configure a global gitignore file?"
   GITIGNORE_CHOICE=$(gum choose "Yes" "No")
   if [ "$GITIGNORE_CHOICE" = "Yes" ]; then
-    GITIGNORE_PATH=$(gum input --placeholder "Enter the path for your global gitignore file (default: ~/.gitignore)")
+    GITIGNORE_PATH=$(gum input --placeholder "Enter the path for your global gitignore file (default: ~/.gitignore_global)")
     if [ -z "$GITIGNORE_PATH" ]; then
-      GITIGNORE_PATH="$HOME/.gitignore"
+      GITIGNORE_PATH="$HOME/.gitignore_global"
       gum style --foreground "#FFFF00" --bold "No path provided. Using default: $GITIGNORE_PATH"
     fi
     git config --global core.excludesfile "$GITIGNORE_PATH"
