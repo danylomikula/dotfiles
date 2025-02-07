@@ -2,6 +2,15 @@
 
 add_newline = true
 
+[battery]
+full_symbol = '🔋 '
+charging_symbol = '⚡️ '
+discharging_symbol = '💀 '
+
+[[battery.display]]
+threshold = 15
+style = 'bold red'
+
 [character]
 success_symbol = '[➜](bold green)'
 error_symbol = '[✗](bold red) '
@@ -17,7 +26,6 @@ format = 'underwent [$duration](bold yellow)'
 disabled = true
 
 [azure]
-format = 'on [$symbol($subscription)]($style) '
 disabled = true
 
 [gcloud]
@@ -43,13 +51,19 @@ stashed = ''
 modified = '📝'
 staged = '[++\($count\)](green)'
 renamed = '👅'
-deleted = '🗑'
+deleted = '🗑 '
 disabled = false
 
-[golang]
-disabled = true
-
 [kubernetes]
+disabled = false
+
+[terraform]
+format = '[🏎💨 $version$workspace]($style) '
+disabled = false
+
+[helm]
+format = "via [$symbol($version )]($style)"
+detect_files = ['helmfile.yaml', 'helmfile.yml', 'Chart.yaml', 'Chart.yml', 'helm-values.yaml', 'helm-values.yml']
 disabled = false
 
 [sudo]
