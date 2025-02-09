@@ -66,7 +66,7 @@ brew tap hashicorp/tap
 # ---------------------------- CLI Tools ---------------------------------------
 
 gum style --foreground "#00FF00" --bold "Installing CLI tools..."
-brew install jq fx yh htop iperf3 make wget speedtest-cli tree eza zoxide stow docker docker-compose docker-buildx colima zellij derailed/k9s/k9s fzf kubernetes-cli kubectx helm terragrunt warrensbox/tap/tfswitch awscli hashicorp/tap/vault argocd ansible
+brew install jq fx yh htop iperf3 make wget speedtest-cli tree eza zoxide stow hugo docker docker-compose docker-buildx colima zellij derailed/k9s/k9s fzf kubernetes-cli kubectx helm terragrunt warrensbox/tap/tfswitch awscli hashicorp/tap/vault argocd ansible
 
 # ---------------------- Dotfiles Synchronization ------------------------------
 gum style --foreground "#00FF00" --bold "Synchronizing dotfiles..."
