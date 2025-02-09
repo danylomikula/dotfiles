@@ -55,7 +55,7 @@ pyenv global "$LATEST_PYTHON_VERSION"
 # --------------------------- Brew Casks ---------------------------------------
 
 gum style --foreground "#00FF00" --bold "Installing Brew Casks..."
-brew install --cask arc telegram slack aldente bartender mullvadvpn tailscale google-drive obsidian grammarly-desktop betterdisplay alacritty visual-studio-code maccy shottr openinterminal bitwarden fork lens
+brew install --cask arc signal telegram slack aldente bartender mullvadvpn tailscale google-drive obsidian grammarly-desktop betterdisplay alacritty visual-studio-code maccy shottr bitwarden fork lens
 
 # ----------------------- HashiCorp Repository ---------------------------------
 
