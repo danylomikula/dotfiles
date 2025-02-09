@@ -33,6 +33,7 @@ pyenv
 zsh-autosuggestions
 zsh-syntax-highlighting
 fast-syntax-highlighting
+zsh-history-substring-search
 zsh-autocomplete
 you-should-use
 )
