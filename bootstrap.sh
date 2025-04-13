@@ -44,8 +44,8 @@ brew install starship
 
 # -------------------- Python Environment (pyenv) ------------------------------
 
-gum style --foreground "#00FF00" --bold "Installing and configuring pyenv and pyenv-virtualenv..."
-brew install xz pyenv pyenv-virtualenv
+gum style --foreground "#00FF00" --bold "Installing and configuring pip-tools, pyenv and pyenv-virtualenv..."
+brew install xz pyenv pyenv-virtualenv pip-tools
 eval "$(pyenv init - zsh)"
 
 LATEST_PYTHON_VERSION=$(pyenv install --list | grep -E '^\s*[0-9]+\.[0-9]+\.[0-9]+$' | grep -v -E 'dev|a|b|rc' | tail -1 | tr -d ' ')
