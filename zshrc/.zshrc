@@ -3,6 +3,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Custom $PATH with extra locations
 export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
+export PATH="$PATH:$HOME/bin"
 
 # Disable Homebrew Analytics
 export HOMEBREW_NO_ANALYTICS=1
