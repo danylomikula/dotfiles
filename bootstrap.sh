@@ -6,8 +6,20 @@
 #                                                    - Installs packages, performs system
 #                                                      configuration, and includes SSH and
 #                                                      GPG key generation and integration.
+# 1.1          14-November-2025  Danylo Mikula       Added AI Agents Configuration:
+#                                                    - Added sudo keepalive mechanism
+#                                                    - Added optional AI agents setup
+#                                                      (Codex & Claude with Context7 MCP)
 #
 # ------------------------------------------------------------------------------
+
+# ----------------------- Keep Sudo Alive --------------------------------------
+
+# Request sudo password once and keep it alive throughout the script
+sudo -v
+
+# Keep sudo timestamp updated in the background until script finishes
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # ----------------------- Homebrew & Basic Tools -----------------------------
 
@@ -66,7 +78,17 @@ brew tap hashicorp/tap
 # ---------------------------- CLI Tools ---------------------------------------
 
 gum style --foreground "#00FF00" --bold "Installing CLI tools..."
-brew install jq fx yh htop iperf3 make wget speedtest-cli tree eza zoxide stow hugo docker docker-compose docker-buildx colima zellij derailed/k9s/k9s fzf kubernetes-cli kubectx helm terragrunt warrensbox/tap/tfswitch awscli hashicorp/tap/vault argocd ansible pkcs11-tools libp11 openssh opensc ykman
+brew install jq fx yh htop iperf3 make wget speedtest-cli tree eza zoxide stow go hugo docker docker-compose docker-buildx colima zellij derailed/k9s/k9s fzf kubernetes-cli kubectx helm terragrunt warrensbox/tap/tfswitch awscli hashicorp/tap/vault argocd ansible pkcs11-tools libp11 openssh opensc ykman
+
+# ------------------------- AI Agents Configuration ----------------------------
+
+gum style --foreground "#00FF00" --bold "Do you want to configure AI coding agents (Codex & Claude)?"
+AI_AGENTS_CHOICE=$(gum choose "Yes" "No")
+if [ "$AI_AGENTS_CHOICE" = "Yes" ]; then
+  bash "$(dirname "$0")/configure-ai-agents.sh"
+else
+  gum style --foreground "#FFFF00" --bold "Skipping AI agents configuration."
+fi
 
 # ---------------------- Dotfiles Synchronization ------------------------------
 gum style --foreground "#00FF00" --bold "Synchronizing dotfiles..."
