@@ -7,19 +7,10 @@
 #                                                      configuration, and includes SSH and
 #                                                      GPG key generation and integration.
 # 1.1          14-November-2025  Danylo Mikula       Added AI Agents Configuration:
-#                                                    - Added sudo keepalive mechanism
 #                                                    - Added optional AI agents setup
 #                                                      (Codex & Claude with Context7 MCP)
 #
 # ------------------------------------------------------------------------------
-
-# ----------------------- Keep Sudo Alive --------------------------------------
-
-# Request sudo password once and keep it alive throughout the script
-sudo -v
-
-# Keep sudo timestamp updated in the background until script finishes
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # ----------------------- Homebrew & Basic Tools -----------------------------
 
