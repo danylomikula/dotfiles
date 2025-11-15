@@ -79,7 +79,6 @@ bash configure-ai-agents.sh
 Main setup script that orchestrates the entire installation process.
 
 **Features:**
-- Sudo keepalive (no repeated password prompts)
 - Interactive configuration with `gum`
 - Modular setup blocks
 - Error handling and validation
@@ -140,7 +139,6 @@ dotfiles/
 
 ## 🔐 Security Features
 
-- **Password Management**: Single sudo password prompt with keepalive
 - **SSH Keys**: ED25519 by default with configurable rounds
 - **GPG Keys**: ED25519 curve for commit signing
 - **GitHub Integration**: Secure authentication via GitHub CLI
