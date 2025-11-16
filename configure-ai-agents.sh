@@ -17,20 +17,12 @@ brew install node claude-code codex
 # ----------------------- Codex Configuration ----------------------------------
 
 gum style --foreground "#00FF00" --bold "Configuring Codex..."
-CODEX_DIR="$HOME/.codex"
-mkdir -p "$CODEX_DIR"
 
-# Create AGENTS.md
-cat > "$CODEX_DIR/AGENTS.md" <<'EOF'
-# Global instructions
-
-## context7 instructions
-- Always use context7 when I need code generation, setup or configuration steps, or library/API documentation. This means you should automatically use the Context7 MCP tools to resolve library id and get library docs without me having to explicitly ask.
-EOF
-
-gum style --foreground "#00FF00" --bold "Created $CODEX_DIR/AGENTS.md"
+# Sync Codex dotfiles
+stow codex
 
 # Create config.toml (overwrite if exists)
+CODEX_DIR="$HOME/.codex"
 cat > "$CODEX_DIR/config.toml" <<'EOF'
 model = "gpt-5.1-codex"
 model_reasoning_effort = "high"
@@ -45,18 +37,9 @@ gum style --foreground "#00FF00" --bold "Created $CODEX_DIR/config.toml"
 # ----------------------- Claude Configuration ---------------------------------
 
 gum style --foreground "#00FF00" --bold "Configuring Claude..."
-CLAUDE_DIR="$HOME/.claude"
-mkdir -p "$CLAUDE_DIR"
 
-# Create CLAUDE.md (overwrite if exists)
-cat > "$CLAUDE_DIR/CLAUDE.md" <<'EOF'
-# Context7 MCP usage
-- Always use context7 when I need code generation, setup or configuration steps, or
-library/API documentation. This means you should automatically use the Context7 MCP
-tools to resolve library id and get library docs without me having to explicitly ask.
-EOF
-
-gum style --foreground "#00FF00" --bold "Created $CLAUDE_DIR/CLAUDE.md"
+# Sync Claude dotfiles
+stow claude
 
 # Enable MCP server for Claude
 gum style --foreground "#00FF00" --bold "Enabling Context7 MCP server for Claude..."
