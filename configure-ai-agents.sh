@@ -12,8 +12,7 @@
 # ----------------------- Install Required Tools -------------------------------
 
 gum style --foreground "#00FF00" --bold "Installing AI coding tools..."
-brew install node codex
-brew install --cask claude-code
+brew install node claude-code codex
 
 # ----------------------- Codex Configuration ----------------------------------
 
