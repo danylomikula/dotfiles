@@ -1,2 +1,6 @@
 .DS_Store
 .vscode
+
+# Ignore everything in docker/.docker except config.json
+docker/.docker/*
+!docker/.docker/config.json
