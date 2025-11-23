@@ -69,7 +69,7 @@ brew tap hashicorp/tap
 # ---------------------------- CLI Tools ---------------------------------------
 
 gum style --foreground "#00FF00" --bold "Installing CLI tools..."
-brew install jq fx yh htop iperf3 make wget speedtest-cli tree eza zoxide stow go hugo docker docker-compose docker-buildx colima zellij derailed/k9s/k9s fzf kubernetes-cli kubectx helm terragrunt warrensbox/tap/tfswitch awscli hashicorp/tap/vault argocd ansible pkcs11-tools libp11 openssh opensc ykman
+brew install jq fx yh htop iperf3 make wget speedtest-cli tree eza zoxide stow go hugo docker docker-compose docker-buildx colima zellij derailed/k9s/k9s webp fzf kubernetes-cli kubectx helm terragrunt pre-commit terraform-docs tflint warrensbox/tap/tfswitch awscli hashicorp/tap/vault argocd ansible pkcs11-tools libp11 openssh opensc ykman
 
 # ------------------------- AI Agents Configuration ----------------------------
 

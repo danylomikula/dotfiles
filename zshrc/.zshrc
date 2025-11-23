@@ -8,6 +8,9 @@ export PATH="$PATH:$HOME/bin"
 # Disable Homebrew Analytics
 export HOMEBREW_NO_ANALYTICS=1
 
+# Disable telemetry
+export DISABLE_TELEMETRY=1
+
 # Load Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
