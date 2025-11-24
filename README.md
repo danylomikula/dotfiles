@@ -1,5 +1,8 @@
 # Dotfiles
 
+[![Read on dev.to](https://img.shields.io/badge/dev.to-Read%20the%20guide-black?logo=devdotto)](https://dev.to/mikula/automated-macos-setup-with-dotfiles-4221)
+[![Read on mikula.dev](https://img.shields.io/badge/mikula.dev-Read%20the%20guide-blue?logo=safari)](https://mikula.dev/posts/infrastructure/automated-macos-setup-with-dotfiles/)
+
 Automated macOS system setup and configuration with dotfiles management.
 
 ## 📋 Overview
@@ -64,9 +67,9 @@ The script will prompt you for configuration choices throughout the setup proces
 
 Optional setup for AI coding assistants with Context7 MCP integration:
 
-- **Codex**: Configured with gpt-5.1-codex model
-- **Claude**: Integrated with Context7 for library documentation
-- **Features**: Automatic library ID resolution and documentation retrieval
+- **Codex**: OpenAI Codex CLI with custom instructions (AGENTS.md)
+- **Claude**: Claude Code CLI with custom instructions (CLAUDE.md)
+- **Context7 MCP**: Automatic library documentation lookup for both agents
 
 Run separately:
 ```bash
@@ -128,8 +131,10 @@ dotfiles/
 ├── generate-gpg-key.sh          # GPG key generation
 ├── configure-ai-agents.sh       # AI agents setup
 ├── alacritty/                   # Alacritty config
+├── claude/                      # Claude Code config (CLAUDE.md)
+├── codex/                       # Codex config (AGENTS.md)
 ├── docker/                      # Docker config
-├── git/                         # Git config
+├── git/                         # Git config (global gitignore)
 ├── github-cli/                  # GitHub CLI config
 ├── k9s/                         # K9s config
 ├── starship/                    # Starship prompt config
